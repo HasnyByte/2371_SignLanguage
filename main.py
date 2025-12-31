@@ -65,7 +65,7 @@ def save_webcam_dataset(hand_img, label):
 def load_model(device):
     model = SignCNN(num_classes=25).to(device)
     model.load_state_dict(
-        torch.load("model/model_best.pth", map_location=device)
+        torch.load("model/model.pth", map_location=device)
     )
     model.eval()
     print("✓ CNN model loaded")
